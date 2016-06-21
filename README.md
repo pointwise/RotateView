@@ -1,7 +1,7 @@
 # RotateView
 A Pointwise Glyph script which rotates the current view by specified rotation angles.
 
-![RotateViewGUI](https://raw.github.com/pointwise/RotateView/master/ScriptImage.png)
+![RotateViewGUI](https://raw.github.com/pointwise/RotateView/master/ScriptImage.PNG)
 
 ## Operation 
  - Specify a rotation angle about each axis
