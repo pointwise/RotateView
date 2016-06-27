@@ -15,6 +15,9 @@
 #   - Enable/Disable rotation animation with the "Animate" checkbox
 #   - Click "Rotate" to execute
 #   - Click "Done" to exit
+# Additional notes:
+#   - Click one of three isometric views to quickly rotate
+#   - Click "Reset" to reset the view
 #_____________________________________________________________#
 
 # Load Glyph and TK modules
@@ -51,7 +54,8 @@ proc RotateView {angles} {
     set fullQuaternion [pwu::Quaternion rotate \
                        [pwu::Quaternion rotate \
                        [pwu::Quaternion rotate $zQuaternion $yQuaternion] $xQuaternion] $currQuaternion];
-       
+    
+    # Specify the new view   
     set rotAxis  [pwu::Quaternion axis $fullQuaternion]
     set rotAngle [pwu::Quaternion angle $fullQuaternion]
     set view     [lreplace $currView 2 3 $rotAxis $rotAngle]
@@ -92,6 +96,7 @@ proc ResetView {} {
     global sec infoMessage currView
     set infoMessage "Specify rotation angles or isometric view."
 
+    # Reset the view to what it was before running the script
     pw::Display setCurrentView -animate $sec $currView
     
 }
@@ -133,6 +138,7 @@ grid [tk::entry  .f.zAng -width $entryWidth -textvariable angleZ] -column 5 -row
 
 grid [ttk::separator .f.s1 -orient horizontal] -column 0 -row $r -columnspan 6 -sticky ew; incr r
 
+# Isometric views
 set xIsoCommand {IsoViewReset X; RotateView [list 0 45 35.264]}
 set yIsoCommand {IsoViewReset Y; RotateView [list 35.264 0 45]}
 set zIsoCommand {IsoViewReset Z; RotateView [list 35.264 45 0]}
