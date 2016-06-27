@@ -5,13 +5,24 @@ A Pointwise Glyph script which rotates the current view by specified rotation an
 
 ## Operation 
  - Specify a rotation angle about each axis
- - Enable/Disable rotation animation with the "Animate" checkbox
+ - Enable/Disable animation with the "Animate Rotation" checkbox
  - Click "Rotate" to execute
+ - Click "Reset" to reset the view
  - Click "Done" to exit
 
+## Isometric Views
+ - Click one of three isometric views to quickly rotate
+ - X-Iso snaps to a -X orientation then rotates 35.264 degrees about the Z-axis and 45 degrees about the Y-axis
+ - Y-Iso snaps to a -Y orientation then rotates 35.264 degrees about the X-axis and 45 degrees about the Z-axis
+ - Z-Iso snaps to a -Z orientation then rotates 35.264 degrees about the X-axis and 45 degrees about the Y-axis
+
 ## Hotkeys
- - Hit the "Enter" key to rotate
- - Hit the "Esc" key to exit
+ - "Ctrl-x" for X-Iso view
+ - "Ctrl-y" for Y-Iso view
+ - "Ctrl-z" for Z-Iso view
+ - "Enter" to rotate
+ - "Ctrl-r" to reset view
+ - "Esc" to exit
 
 ## Disclaimer
 Scripts are freely provided. They are not supported products of Pointwise, Inc. Some scripts have been written and contributed by third parties outside of Pointwise's control.

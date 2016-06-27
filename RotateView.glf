@@ -12,7 +12,7 @@
 # rotation angles. 
 # Operation:
 #   - Specifiy rotation angles about each axis
-#   - Enable/Disable rotation animation with the "Animate" checkbox
+#   - Enable/Disable animation with the "Animate Rotation" checkbox
 #   - Click "Rotate" to execute
 #   - Click "Done" to exit
 # Additional notes:
